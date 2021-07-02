@@ -1,5 +1,10 @@
 {
   "dependencies": {
     "@hubspot/cli": "^3.0.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "upload": "npx hs upload my-theme my-theme",
+    "watch:dev": "hs watch --portal=hubspot-sandbox my-theme my-theme --initial-upload --remove"
   }
 }
