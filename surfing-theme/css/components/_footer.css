@@ -1,0 +1,9 @@
+
+footer{
+    background: {{ theme.global_colors.secondary_color.color }};
+    color: {{ theme.global_colors.light_color.color }};;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

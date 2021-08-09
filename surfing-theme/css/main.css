@@ -1,0 +1,11 @@
+
+
+body{
+    background: {{ theme.global_colors.main_color.color }}
+}
+
+{% include './generic/_reset.css' %}
+{% include './generic/_layout.css' %}
+    
+{% include './components/_header.css' %}
+{% include './components/_footer.css' %}
