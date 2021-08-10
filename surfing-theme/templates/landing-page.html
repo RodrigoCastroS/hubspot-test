@@ -22,32 +22,56 @@
          
           {% dnd_area "body_dnd_area" label="First Section"%}
             {% dnd_section
-                padding= 10,
-                max_width=1000,
+                padding={
+                'top': '2em',
+                'bottom': '2em',
+                'left': '1em',
+                'right': '1em'
+                }, 
+                max_width=1200,
                 vertical_alignment='MIDDLE'
             %}
-                {% dnd_module path='@hubspot/rich_text', width=8, offset=0, label="Rich Text" %}
+                {% dnd_module path='@hubspot/rich_text', width=6, offset=6, label="Rich Text" %}
                     {% module_attribute "html"%}
-                      <h1>This is your main headline.</h1>
+                      <h1>This is the main headline</h1>
                       <p>Use this space to tell everyone about what you have to offer.</p>
                     {% end_module_attribute %}
                 {% end_dnd_module %}
                 {% dnd_module path='@hubspot/linked_image', 
-                  width=4, 
-                  offset=8, 
+                  width=5, 
+                  offset=0, 
                   img={
-                    "src": "https://images.unsplash.com/photo-1523606772308-64a28db0ef2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHN1cmZ8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60",
-                    "alt": "Stock placeholder image"
+                    "src": "https://images.unsplash.com/photo-1508162252424-e8ad5ef02539?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80",
+                    "alt": "Shot from above of some surfers"
                   } 
                 %}
                 {% end_dnd_module %}
             {% end_dnd_section %}
         {% end_dnd_area %}
-      
+
+        {% dnd_area "second_dnd_area" label="Second Section"%}
+          {% dnd_section 
+            margin={
+              'top': 32,
+              'bottom': 32
+            },
+            padding={
+              'top': 10,
+              'bottom': 10,
+              'left': 10,
+              'right': 10
+            },
+            max_width=1200,
+            vertical_alignment='TOP'
+          %}
+
+            {% module 'Grid Showcase' path='../modules/Grid-showcase.module' %}
+          {% end_dnd_section %}
+        {% end_dnd_area %}
+
           </main> 
           </div>
-        {% global_partial path="./partials/footer.html" %}   
-
+      {% global_partial path="./partials/footer.html" %}   
       {{ standard_footer_includes }}
     </body>
 </html>

@@ -4,7 +4,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "upload": "npx hs upload my-theme my-theme",
-    "watch:dev": "hs watch --portal=hubspot-sandbox my-theme my-theme --initial-upload --remove"
+    "upload": "npx hs upload surfing-theme surfing-theme",
+    "watch:dev": "hs watch --portal=hubspot-sandbox surfing-theme surfing-theme --initial-upload --remove"
   }
 }

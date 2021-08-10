@@ -1,0 +1,19 @@
+
+
+<div class="grid-showcase">
+	<div class="grid-showcase__title">
+		{% inline_text field="section_title" value="{{ module.section_title }}" %}
+	</div>
+	<div class="grid-showcase__cards">
+		{% for item in module.card_location %}
+			<div class="card">
+				{% if item.image_location.src %}
+					 {% set loadingAttr = item.image_location.loading != 'disabled' ? 'loading="{{ item.image_location.loading }}"' : '' %}
+				<img class="card__image" src="{{ item.image_location.src }}" alt="{{ item.image_location.alt }}" {{ loadingAttr }}>
+				{% endif %}
+				<div class="card__location">{% inline_text field="location" value="{{ item.location }}" %}</div>
+				<div class="card__location-description">{% inline_text field="location_description" value="{{ item.location_description }}" %}</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
